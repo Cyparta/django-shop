@@ -43,7 +43,7 @@ class OrderView(mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.UpdateM
     Base View class to render the fulfilled orders for the current user.
     """
     #renderer_classes = [CMSPageRenderer, JSONRenderer, BrowsableAPIRenderer] #removed by moaz for run the order
-    renderer_classes = [CMSPageRenderer, JSONRenderer, BrowsableAPIRenderer] 
+    renderer_classes = [JSONRenderer, BrowsableAPIRenderer] 
     list_serializer_class = OrderListSerializer
     detail_serializer_class = OrderDetailSerializer
     pagination_class = OrderPagination
